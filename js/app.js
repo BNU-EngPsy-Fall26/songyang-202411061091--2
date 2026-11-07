@@ -62,7 +62,6 @@
       <div class="site-shell">
         <header class="site-header">
           <span class="site-brand mono">ATTENTION LAB / W05–W07</span>
-          ${opts.history ? '<button class="glass record-button" data-record type="button">实验记录</button>' : ""}
         </header>
         <main class="site-main">${content}</main>
         <footer class="site-footer">
