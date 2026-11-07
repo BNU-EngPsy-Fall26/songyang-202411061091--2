@@ -1,4 +1,4 @@
-在线实验链接：[https://bnu-engpsy-fall26.github.io/songyang--/](https://bnu-engpsy-fall26.github.io/songyang--/)
+在线实验链接：[https://bnu-engpsy-fall26.github.io/songyang-202411061091--2/](https://bnu-engpsy-fall26.github.io/songyang-202411061091--2/)
 
 # 注意实验室：变化觉察、安检搜索与图形知觉
 
@@ -57,6 +57,7 @@ attention-lab-hw2/
 │  ├─ results.js
 │  └─ app.js
 └─ vendor/
+   ├─ character-ocean/
    └─ webgazer/
       ├─ webgazer.js
       └─ mediapipe/face_mesh/
@@ -64,7 +65,6 @@ attention-lab-hw2/
 
 ## 总体设计
 
-- 欢迎页、实验首页和结果页的动态背景使用 `character-ocean` 项目的原 DOTS 鱼群引擎；正式实验期间会暂停并隐藏背景。
 - 仅使用匿名编号，不收集姓名、学号或其他身份信息。
 - 编号可填写 `1`、`P01` 或其他简短匿名编号，不要求固定格式。
 - 被试先阅读知情同意，再选择摄像头眼动或鼠标兜底。
@@ -244,7 +244,7 @@ https://attention-lab-production.up.railway.app/api/hw2/submit
 
 ## AI 使用说明
 
-AI 用于辅助代码结构、界面实现、试次生成、统计函数和文档整理。实验条件、预测、任务参数、结果解释和提交决定由作者确认。未使用 AI 生成或篡改被试数据。
+AI 用于辅助代码结构、试次生成、统计函数和文档整理。实验条件、预测、任务参数、结果解释和提交决定由作者确认。未使用 AI 生成或篡改被试数据。
 
 ## 已知限制
 
@@ -252,4 +252,3 @@ AI 用于辅助代码结构、界面实现、试次生成、统计函数和文�
 - 小样本班级数据不适合作为稳定总体估计。
 - 鼠标兜底只能记录光标位置，不能等同于真实注视。
 - 不同浏览器、屏幕尺寸和渲染帧率可能影响反应时。
-- `character-ocean` 的鱼群动画上游代码没有声明明确许可证。本作业保留来源说明；若公开部署并再分发，应先确认授权或许可范围。
