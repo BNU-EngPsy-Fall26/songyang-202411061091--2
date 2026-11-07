@@ -223,8 +223,17 @@
           <p class="eyebrow">9-POINT EYE CALIBRATION</p>
           <h2>眼动校准</h2>
           <p>保持头部不动，眼睛盯住圆点，并连续点击同一个圆点 5 次。</p>
+          <button class="calibration-button" data-calibration-start type="button">开始校准</button>
         </div>`);
       const dots = overlay.querySelector(".calibration-dots");
+      dots.hidden = true;
+      await new Promise((resolve) => {
+        overlay.querySelector("[data-calibration-start]").addEventListener("click", () => {
+          overlay.querySelector(".calibration-copy").remove();
+          dots.hidden = false;
+          resolve();
+        }, { once: true });
+      });
       const points = [];
       for (const y of [0.1, 0.5, 0.9]) {
         for (const x of [0.08, 0.5, 0.92]) points.push([x, y]);
@@ -266,8 +275,17 @@
           <p class="eyebrow">${opts.quick ? "QUICK VALIDATION" : "5-POINT VALIDATION"}</p>
           <h2>${opts.quick ? "快速验证" : "验证眼动精度"}</h2>
           <p>只需盯住出现的圆点，不要点击。</p>
+          <button class="calibration-button" data-calibration-start type="button">开始验证</button>
         </div>`);
       const dots = overlay.querySelector(".calibration-dots");
+      dots.hidden = true;
+      await new Promise((resolve) => {
+        overlay.querySelector("[data-calibration-start]").addEventListener("click", () => {
+          overlay.querySelector(".calibration-copy").remove();
+          dots.hidden = false;
+          resolve();
+        }, { once: true });
+      });
       const targets = [[0.5, 0.5], [0.2, 0.2], [0.8, 0.2], [0.2, 0.8], [0.8, 0.8]];
       const samplesPerPoint = [];
       this.resetStats();
