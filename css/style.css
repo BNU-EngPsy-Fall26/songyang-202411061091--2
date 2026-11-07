@@ -1034,12 +1034,12 @@ html[data-theme="dark"] .result-bar-track i {
 
 .calibration-copy {
   position: absolute;
-  top: 24px;
+  top: 50%;
   left: 50%;
   z-index: 2;
   width: min(600px, calc(100% - 40px));
   text-align: center;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 .calibration-copy h2 {
@@ -1057,13 +1057,36 @@ html[data-theme="dark"] .result-bar-track i {
   color: rgba(244, 243, 239, 0.45);
 }
 
+.calibration-button {
+  min-height: 46px;
+  margin-top: 16px;
+  padding: 0 24px;
+  border: 2px solid #f4f3ef;
+  border-radius: 23px;
+  background: #f4f3ef;
+  color: #111512;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 4px 5px 0 rgba(216, 181, 74, 0.72);
+}
+
+.calibration-button:hover {
+  background: #d8b54a;
+}
+
 .calibration-dots {
   position: absolute;
   inset: 0;
 }
 
+.calibration-dots[hidden] {
+  display: none;
+}
+
 .calibration-dot {
   position: absolute;
+  z-index: 4;
   width: 42px;
   height: 42px;
   border: 3px solid #d8b54a;
